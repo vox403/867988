@@ -195,7 +195,27 @@ function assetFail(img){
           question:'우우! 악덕기업 복스테크는 사과문과 보상을 줘라!!',
           answer:'뭘 사과하라는 건진 모르겠지만……. 후하게 대접받고 끝낼 생각은 없어? 복스, 쟤 내 방으로 불러.',
           date:'PUBLIC LOG 005'
-        }              
+        },
+        {
+          question:'압바 휴가가지 마 나랑 여기 있어요 나도 데려가아',
+          answer:'이거 뭐야? 복스! 내 털에 이상한 게 매달려 있잖아! 빨리 지져 줘!',
+          date:'PUBLIC LOG 006'
+        },
+        {
+          question:'프로필 사진 너무 귀여우세요 'ㅡ-ㅡ' 하고 계시네요',
+          answer:'잘 어울리지?',
+          date:'PUBLIC LOG 007'
+        },
+       {
+          question:'뭐야 발렌티노님이 새로 키우는 쌍년이 있다고? 힌트 좀 주세요 아빠 힌트🥺🥺',
+          answer:'너잖아. 이 쌍년아! 기다리고 있으니까 빨리 뛰어 와.',
+          date:'PUBLIC LOG 008'
+        },
+       {
+          question:'사장님 온리팬스 어디서 구독하나요 급해요',
+          answer:'복스가 막았어. 미공개 사진은, 음. 돈 받고 팔까? 백만 달러 챙겨 와, 자기.',
+          date:'PUBLIC LOG 009'
+        }
       ],
       vox: [
         {
@@ -255,7 +275,8 @@ function assetFail(img){
       { src: '04.png', label: 'VOXTAGRAM 04' },
       { src: '05.png', label: 'VOXTAGRAM 05' },
       { src: '06.png', label: 'VOXTAGRAM 06' },
-      { src: '07.png', label: 'VOXTAGRAM 07' }
+      { src: '07.png', label: 'VOXTAGRAM 07' },
+      { src: '08.png', label: 'VOXTAGRAM 08' }
     ];
     let currentGallery = 0;
 
