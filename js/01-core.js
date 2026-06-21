@@ -275,8 +275,7 @@ function assetFail(img){
       { src: '04.png', label: 'VOXTAGRAM 04' },
       { src: '05.png', label: 'VOXTAGRAM 05' },
       { src: '06.png', label: 'VOXTAGRAM 06' },
-      { src: '07.png', label: 'VOXTAGRAM 07' },
-      { src: '08.png', label: 'VOXTAGRAM 08' }
+      { src: '07.png', label: 'VOXTAGRAM 07' }
     ];
     let currentGallery = 0;
 
