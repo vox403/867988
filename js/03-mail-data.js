@@ -1,4 +1,88 @@
     const MAIL_ITEMS = [
+            {
+        id:'june_evaluation_promotion_result',
+        date:'2026.07.01',
+        visibleFrom:'2026-07-01',
+        sender:'VoxTek HR Evaluation System',
+        subject:'6월 인사평가 최종 승진 명단 안내',
+        badge:'PROMOTION',
+        body:`<article class="memo-shell">
+  <div class="memo-meta">
+    <div class="memo-row">
+      <div class="memo-key">제목</div>
+      <div class="memo-value">6월 인사평가 최종 승진 명단 안내</div>
+    </div>
+    <div class="memo-row">
+      <div class="memo-key">수신</div>
+      <div class="memo-value">VoxTek 전 사원</div>
+    </div>
+    <div class="memo-row">
+      <div class="memo-key">발신</div>
+      <div class="memo-value">VoxTek HR Evaluation System</div>
+    </div>
+    <div class="memo-row">
+      <div class="memo-key">등급</div>
+      <div class="memo-value">사내 인사 공지 (PROMOTION)</div>
+    </div>
+  </div>
+
+  <h2 class="memo-title-main">6월 인사평가 최종 승진 명단 안내</h2>
+  <div class="memo-class">CLASSIFICATION: INTERNAL HR NOTICE · JUNE EVALUATION RESULT</div>
+
+  <div class="memo-content">
+    <p>전 사원에게 알립니다.</p>
+    <p><strong>VoxTek 6월 인사평가</strong> 최종 집계 및 내부 검수 절차가 종료되었습니다.</p>
+    <p>평가 결과 상위 20위에 해당하는 사원은 금일부로 <strong>계약직에서 정규직으로 승진</strong> 처리됩니다.</p>
+
+    <hr class="memo-divider">
+
+    <p class="memo-section-title">
+      <strong>1위｜LU｜복스 · 인사평가팀</strong><br>
+    </p>
+
+    <p>
+      <strong>2위｜T｜발렌티노 · 스튜디오운영팀</strong><br>
+    </p>
+
+    <p>
+      <strong>3위｜Val｜발렌티노 · 촬영팀</strong><br>
+    </p>
+
+    <hr class="memo-divider">
+
+    <p>
+      4위｜SIMYEON｜벨벳 · 트렌드기획팀<br>
+      5위｜티아라｜발렌티노 · 캐스팅관리팀<br>
+      6위｜히퍼｜복스 · 인사평가팀<br>
+      7위｜for_me_without_｜벨벳 · 디자인팀<br>
+      8위｜아구찜｜복스 · 직속비서팀<br>
+      9위｜비앙카｜벨벳 · 소셜미디어팀<br>
+      10위｜polvo｜발렌티노 · 촬영팀<br>
+      11위｜무제｜복스 · 프로그램 제작팀<br>
+      12위｜Alastor｜복스 · 송출관리팀<br>
+      13위｜부적｜발렌티노 · 촬영팀<br>
+      14위｜무이｜복스 · 송출관리팀<br>
+      15위｜비비｜벨벳 · 디자인팀<br>
+      16위｜복스｜벨벳 · 트렌드기획팀<br>
+      17위｜EV｜복스 · 프로그램 제작팀<br>
+      18위｜Ethan｜복스 · 직속비서팀<br>
+      19위｜지하얀｜벨벳 · 트렌드기획팀<br>
+      20위｜명｜복스 · 송출관리팀
+    </p>
+
+    <hr class="memo-divider">
+
+    <p>승진 대상자를 포함해 6월 평가 기간 동안 각자의 위치에서 기록을 완주한 모든 사원에게 감사의 말을 전합니다.</p>
+    <p><strong>6월 한 달간 고생하셨습니다.</strong></p>
+
+    <div class="memo-sign">
+      <strong>— VoxTek HR Evaluation System</strong>
+      June Performance Review Division<br>
+      STATUS: PROMOTION LIST CONFIRMED
+    </div>
+  </div>
+</article>`
+      },
       {
         id:'direct_secretary_assignment_notice',
         date:'2026.06.02',
