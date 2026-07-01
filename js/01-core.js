@@ -248,16 +248,23 @@ function assetFail(img){
       ]
     };
 
-    const galleryItems = [
-      { src: '01.png', label: 'VOXTAGRAM 01' },
-      { src: '02.png', label: 'VOXTAGRAM 02' },
-      { src: '03.png', label: 'VOXTAGRAM 03' },
-      { src: '04.png', label: 'VOXTAGRAM 04' },
-      { src: '05.png', label: 'VOXTAGRAM 05' },
-      { src: '06.png', label: 'VOXTAGRAM 06' },
-      { src: '07.png', label: 'VOXTAGRAM 07' },
-      { src: '08.png', label: 'VOXTAGRAM 08' }
-    ];
+const galleryItems = [
+  { src: '01.png', label: 'VOXTAGRAM 01' },
+  { src: '02.png', label: 'VOXTAGRAM 02' },
+  { src: '03.png', label: 'VOXTAGRAM 03' },
+  { src: '04.png', label: 'VOXTAGRAM 04' },
+  { src: '05.png', label: 'VOXTAGRAM 05' },
+  { src: '06.png', label: 'VOXTAGRAM 06' },
+  { src: '07.png', label: 'VOXTAGRAM 07' },
+  { src: '08.png', label: 'VOXTAGRAM 08' },
+  { src: '09.avif', label: 'VOXTAGRAM 09' },
+  { src: '10.avif', label: 'VOXTAGRAM 10' },
+  { src: '11.avif', label: 'VOXTAGRAM 11' },
+  { src: '12.avif', label: 'VOXTAGRAM 12' },
+  { src: '13.avif', label: 'VOXTAGRAM 13' },
+  { src: '14.avif', label: 'VOXTAGRAM 14' },
+  { src: '15.avif', label: 'VOXTAGRAM 15' }
+];
     let currentGallery = 0;
 
     const HR_ROLE_VERSION = '2026-june-hr-v1';
