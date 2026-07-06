@@ -233,7 +233,7 @@
 .feature-alert-backdrop.hidden{display:none!important}
 .feature-alert{
   position:relative;
-  width:min(400px,calc(100vw - 30px));
+  width:min(520px,calc(100vw - 30px));
   overflow:hidden;
   border:1px solid rgba(255,36,92,.74);
   border-radius:18px;
@@ -288,8 +288,9 @@
 .feature-alert-title{
   margin:0;
   font-size:24px;
-  line-height:1.38;
+  line-height:1.35;
   font-weight:900;
+  white-space:nowrap;
 }
 .feature-alert-copy{
   margin:12px 0 0;
