@@ -1,0 +1,202 @@
+.desktop{
+  display:flex;
+  flex-direction:column;
+  background:
+    radial-gradient(circle at top,rgba(34,98,189,.18),transparent 20%),
+    radial-gradient(circle at bottom right,rgba(255,71,167,.11),transparent 24%);
+}
+.topbar{
+  position:relative;
+  z-index:10;
+  height:var(--header-h);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding:0 18px 0 20px;
+  border-bottom:1px solid rgba(124,205,255,.18);
+  background:linear-gradient(180deg,rgba(6,11,22,.84),rgba(3,8,16,.72));
+  backdrop-filter:blur(10px);
+}
+.topbar-left,
+.topbar-right{
+  display:flex;
+  align-items:center;
+  min-width:0;
+}
+.topbar-left{gap:14px}
+.topbar-right{gap:10px}
+.topbar-logo{
+  font-size:17px;
+  font-weight:800;
+  letter-spacing:.22em;
+  white-space:nowrap;
+  text-shadow:0 0 10px rgba(37,208,255,.18);
+}
+.topbar-sub{
+  color:var(--muted);
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.chip{
+  border:1px solid rgba(117,201,255,.28);
+  border-radius:999px;
+  padding:7px 12px;
+  color:var(--muted);
+  background:rgba(8,16,28,.75);
+  font-size:12px;
+  letter-spacing:.08em;
+  white-space:nowrap;
+}
+.chip strong{color:var(--text)}
+
+.desktop-main{
+  position:relative;
+  flex:1;
+  overflow:hidden;
+  padding:18px;
+}
+.desktop-main::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at center,rgba(37,208,255,.08),transparent 34%),
+    radial-gradient(circle at 75% 22%,rgba(255,71,167,.10),transparent 24%);
+}
+.desktop-hero{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  pointer-events:none;
+  opacity:.18;
+  filter:drop-shadow(0 0 24px rgba(37,208,255,.25));
+}
+.desktop-hero img{
+  width:min(520px,48vw);
+  max-width:70%;
+  max-height:54vh;
+  object-fit:contain;
+}
+.desktop-hero .fallback{
+  width:min(520px,48vw);
+  aspect-ratio:1.2/1;
+  border:1px solid rgba(117,201,255,.24);
+  border-radius:30px;
+  color:rgba(220,245,255,.75);
+  font-size:clamp(22px,4vw,42px);
+  font-weight:800;
+  letter-spacing:.22em;
+  background:radial-gradient(circle at top left,rgba(37,208,255,.10),transparent 42%),rgba(255,255,255,.03);
+}
+
+.icon-dock{
+  position:absolute;
+  top:18px;
+  left:18px;
+  z-index:5;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(100px,118px));
+  gap:14px 16px;
+}
+.desktop-icon{
+  position:relative;
+  border:0;
+  border-radius:18px;
+  padding:10px 8px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  color:var(--text);
+  background:transparent;
+  cursor:pointer;
+  transition:background .18s ease,transform .12s ease,box-shadow .18s ease;
+}
+.desktop-icon:hover{
+  background:rgba(255,255,255,.04);
+  transform:translateY(-1px);
+  box-shadow:0 0 0 1px rgba(124,205,255,.12) inset;
+}
+.desktop-icon:active{
+  transform:translateY(0) scale(.985);
+}
+.icon-frame{
+  position:relative;
+  width:74px;
+  height:74px;
+  border:1px solid rgba(117,201,255,.26);
+  border-radius:22px;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  background:linear-gradient(160deg,rgba(7,15,27,.92),rgba(13,28,44,.88));
+  box-shadow:0 0 18px rgba(37,208,255,.10);
+}
+.icon-frame img{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+  filter:drop-shadow(0 0 9px rgba(37,208,255,.38));
+}
+.icon-fallback{
+  position:absolute;
+  inset:0;
+  color:#d6f7ff;
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+.icon-label{
+  text-align:center;
+  font-size:12px;
+  font-weight:100;
+  letter-spacing:.04em;
+  line-height:1.35;
+  text-transform:uppercase;
+  text-shadow:0 1px 12px rgba(0,0,0,.5);
+}
+.mail-icon-frame{overflow:visible}
+.mail-unread-badge{
+  position:absolute;
+  top:-7px;
+  right:-7px;
+  z-index:3;
+  min-width:23px;
+  height:23px;
+  padding:0 6px;
+  border:1px solid rgba(210,248,255,.86);
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#041018;
+  background:linear-gradient(90deg,var(--blue),var(--blue-2));
+  box-shadow:0 0 14px rgba(37,208,255,.72),0 0 28px rgba(37,208,255,.28);
+  font:900 11px/1 var(--font-display);
+}
+.desktop-icon.has-unread .mail-icon-frame{
+  border-color:rgba(94,231,255,.72);
+  box-shadow:0 0 0 1px rgba(94,231,255,.24) inset,0 0 22px rgba(37,208,255,.34),0 0 36px rgba(255,71,167,.14);
+  animation:mailPulse 1.18s ease-in-out infinite;
+}
+.desktop-icon.has-unread .icon-label::after{
+  content:"READ";
+  display:block;
+  width:max-content;
+  margin:4px auto 0;
+  padding:3px 7px;
+  border-radius:999px;
+  color:#041018;
+  background:linear-gradient(90deg,var(--blue),var(--blue-2));
+  font:900 9px/1 var(--font-display);
+  letter-spacing:.08em;
+}
+@keyframes mailPulse{
+  0%,100%{transform:translateY(0);filter:brightness(1)}
+  50%{transform:translateY(-1px);filter:brightness(1.22)}
+}

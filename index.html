@@ -5,8 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>VOXTEK Desktop Portal</title>
-
-  <link rel="stylesheet" href="css/voxtek.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/desktop.css" />
+  <link rel="stylesheet" href="css/windows.css" />
+  <link rel="stylesheet" href="css/mail.css" />
+  <link rel="stylesheet" href="css/attendance.css" />
+  <link rel="stylesheet" href="css/gallery-credit-id.css" />
+  <link rel="stylesheet" href="css/dialogs.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
   <div id="app">
@@ -79,6 +86,26 @@
       </div>
     </div>
 
+    <div id="affiliationModal" class="modal-backdrop affiliation-backdrop hidden">
+      <div class="modal affiliation-modal">
+        <h3>원하는 소속을 선택하세요.</h3>
+        <div class="affiliation-choice-list" aria-label="소속 선택">
+          <button class="affiliation-choice" type="button" data-affiliation-key="vox">
+            <span>VOX LINE</span>
+            <strong>복스</strong>
+          </button>
+          <button class="affiliation-choice" type="button" data-affiliation-key="valentino">
+            <span>VALENTINO LINE</span>
+            <strong>발렌티노</strong>
+          </button>
+          <button class="affiliation-choice" type="button" data-affiliation-key="velvette">
+            <span>VELVETTE LINE</span>
+            <strong>벨벳</strong>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <section id="introScreen" class="screen intro-screen hidden">
       <article id="introPopup" class="intro-popup" style="left:calc(50% - 310px); top:calc(50% - 220px);">
         <div class="intro-header" id="introDragHandle">
@@ -140,28 +167,36 @@
             <div class="icon-label">MAIL</div>
           </button>
 
-          <button class="desktop-icon" data-app="internet">
+          <button class="desktop-icon" data-app="pursue" aria-label="PURSUE">
             <div class="icon-frame">
-              <img src="icon_2.png" alt="WIKI 아이콘" onerror="assetFail(this)" loading="lazy" decoding="async">
-              <div class="icon-fallback">WIKI</div>
+              <img src="icon_5.png" alt="PURSUE 아이콘" onerror="assetFail(this)" loading="lazy" decoding="async">
+              <div class="icon-fallback">PR</div>
             </div>
-            <div class="icon-label">WIKI</div>
+            <div class="icon-label">PURSUE</div>
           </button>
 
-          <button class="desktop-icon" data-app="contents" aria-label="CONTENTS">
+          <button class="desktop-icon" data-app="betting" data-url="https://vox403.github.io/Point_betting_867988/" aria-label="BETTING">
             <div class="icon-frame">
-              <img src="icon_8.png" alt="CONTENTS 아이콘" onerror="assetFail(this)" loading="lazy" decoding="async">
-              <div class="icon-fallback">CT</div>
+              <img src="icon_3.png" alt="BETTING 아이콘" onerror="assetFail(this)" loading="lazy" decoding="async">
+              <div class="icon-fallback">BET</div>
             </div>
-            <div class="icon-label">CONTENTS</div>
+            <div class="icon-label">BETTING</div>
           </button>
 
-          <button class="desktop-icon" data-app="support">
+          <button class="desktop-icon" data-app="stock" data-url="https://vox403.github.io/867988_Stock_Trading_Game/" aria-label="STOCK">
             <div class="icon-frame">
-              <img src="icon_5.png" alt="VOC 아이콘" onerror="assetFail(this)" loading="lazy" decoding="async">
-              <div class="icon-fallback">VOC</div>
+              <img src="icon_8.png" alt="STOCK 아이콘" onerror="assetFail(this)" loading="lazy" decoding="async">
+              <div class="icon-fallback">ST</div>
             </div>
-            <div class="icon-label">VOC</div>
+            <div class="icon-label">STOCK</div>
+          </button>
+
+          <button class="desktop-icon" data-app="specimen" aria-label="SPECIMEN">
+            <div class="icon-frame">
+              <img src="icon_9.png" alt="SPECIMEN 아이콘" onerror="assetFail(this)" loading="lazy" decoding="async">
+              <div class="icon-fallback">SP</div>
+            </div>
+            <div class="icon-label">SPECIMEN</div>
           </button>
 
           <button class="desktop-icon" data-app="evaluation">
@@ -174,18 +209,10 @@
 
           <button class="desktop-icon" data-app="gallery">
             <div class="icon-frame">
-              <img src="icon_4.png" alt="ALBUM 아이콘" onerror="assetFail(this)" loading="lazy" decoding="async">
-              <div class="icon-fallback">ALBUM</div>
+              <img src="icon_4.png" alt="VOXTAGRAM 아이콘" onerror="assetFail(this)" loading="lazy" decoding="async">
+              <div class="icon-fallback">VOX</div>
             </div>
-            <div class="icon-label">ALBUM</div>
-          </button>
-
-          <button class="desktop-icon" data-app="music">
-            <div class="icon-frame">
-              <img src="icon_3.png" alt="BROADCAST 아이콘" onerror="assetFail(this)" loading="lazy" decoding="async">
-              <div class="icon-fallback">BROAD</div>
-            </div>
-            <div class="icon-label">BROADCAST</div>
+            <div class="icon-label">VOXTAGRAM</div>
           </button>
 
           <button class="desktop-icon" data-app="credit" aria-label="CREDIT">
@@ -239,93 +266,9 @@
               </div>
             </div>
           </section>
-
-          
-          <section class="window hidden" id="window-internet" style="top:96px; left:214px;">
-            <div class="window-header" data-drag-handle>
-              <div class="window-title">WIKI <small>Voxpedia Search</small></div>
-              <div class="window-controls">
-                <button class="window-btn window-close" data-close="window-internet">✕</button>
-              </div>
-            </div>
-            <div class="window-body">
-              <div class="search-shell">
-                <div class="search-bar">
-                  <input id="searchInput" class="search-input" type="text" placeholder="검색어를 입력하세요. 예: 복스 / 발렌티노 / 벨벳 / 알래스터 / 엔젤 더스트 / 찰리 / vees" autocomplete="off">
-                  <button id="searchBtn" class="vox-btn vox-btn-primary" type="button">검색</button>
-                  
-                  <div class="search-tags">
-                    <button class="tag" type="button" data-query="복스">복스</button>
-                    <button class="tag" type="button" data-query="발렌티노">발렌티노</button>
-                    <button class="tag" type="button" data-query="벨벳">벨벳</button>
-                    <button class="tag" type="button" data-query="vees">vees</button>
-                  </div>
-
-                </div>
-
-                <div id="searchResult" class="search-empty">
-                  <strong>Voxpedia 검색 대기 중.</strong><br>
-                  좌측 검색창에 이름을 입력하면 관련 정보가 표시됩니다.<br>
-                  권장 검색어: 복스, 발렌티노, 벨벳, 알래스터, 엔젤, 찰리, 루시퍼, 허스크, 배기, vees
-                  <div class="search-note">※ vees 관련 결과는 홍보성 서술이 우선 적용됩니다.</div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="window hidden" id="window-contents" style="top:76px; left:150px; width:min(1040px, calc(100vw - 72px));">
-            <div class="window-header" data-drag-handle>
-              <div class="window-title">CONTENTS <small>VoxTek Program Hub</small></div>
-              <div class="window-controls">
-                <button class="window-btn window-close" data-close="window-contents" type="button">✕</button>
-              </div>
-            </div>
-            <div class="window-body">
-              <div class="contents-channel-shell">
-                <section class="contents-channel-panel">
-                  <div class="contents-channel-top">
-                    <strong>VOXTEK CONTENTS CHANNEL</strong>
-                    <span class="contents-channel-status">CHANNEL SELECT</span>
-                  </div>
-                  <div class="contents-channel-body">
-                    <section class="contents-select-notice" aria-label="CONTENTS SELECTOR">
-                      <div class="contents-select-kicker">CONTENTS SELECTOR</div>
-                      <h3>채널을 선택하십시오.</h3>
-                      <p>복스테크 외부 프로그램 목록입니다.</p>
-                    </section>
-                    <div class="contents-choice-grid" aria-label="CONTENTS CHANNEL SELECT">
-                      <button class="contents-select-card" type="button" data-contents-url="https://vox403.github.io/Point_betting_867988/">
-                        <span class="contents-select-no">01 / POINT BETTING</span>
-                        <strong>포인트 도박 게임</strong>
-                        <span>POINT BETTING TERMINAL</span>
-                        <p>포인트 배팅 터미널로 이동합니다.</p>
-                        <em class="contents-open">OPEN</em>
-                      </button>
-                      <button class="contents-select-card" type="button" data-contents-url="https://vox403.github.io/867988_Stock_Trading_Game/">
-                        <span class="contents-select-no">02 / STOCK TRADING</span>
-                        <strong>주식 게임</strong>
-                        <span>STOCK TRADING GAME</span>
-                        <p>가상 주식 거래 터미널로 이동합니다.</p>
-                        <em class="contents-open">OPEN</em>
-                      </button>
-                      <button class="contents-select-card" type="button" data-contents-url="https://vox403.github.io/Dating_Simulation/">
-                        <span class="contents-select-no">03 / SECRETARY SIMULATION</span>
-                        <strong>비서 시뮬레이션</strong>
-                        <span>DATING SIMULATION</span>
-                        <p>비서 시뮬레이션 페이지로 이동합니다.</p>
-                        <em class="contents-open">OPEN</em>
-                      </button>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </section>
-
-          
           <section class="window hidden" id="window-evaluation" style="top:50%; left:50%; width:min(900px, calc(100vw - 72px)); height:min(820px, calc(100vh - 88px));">
             <div class="window-header" data-drag-handle>
-              <div class="window-title">EVALUATION <small>June Performance Review</small></div>
+              <div class="window-title">EVALUATION <small>Attendance Check</small></div>
               <div class="window-controls">
                 <button class="window-btn window-close" data-close="window-evaluation">✕</button>
               </div>
@@ -334,7 +277,7 @@
               <div class="evaluation-shell">
                 <section class="evaluation-panel">
                   <div class="evaluation-top">
-                    <strong>JUNE PERFORMANCE REVIEW</strong>
+                    <strong>MONTHLY ATTENDANCE BOARD</strong>
                     <span id="evaluationStatus" class="evaluation-status">LOCKED</span>
                   </div>
                   <div id="evaluationBody" class="evaluation-body"></div>
@@ -344,48 +287,9 @@
           </section>
 
           
-          <section class="window hidden" id="window-support" style="top:50%; left:50%; width:min(780px, calc(100vw - 72px)); height:min(820px, calc(100vh - 88px));">
-            <div class="window-header window-header-voc" data-drag-handle>
-              <div class="window-title">VOC <small>Internal Counsel Line</small></div>
-              <div class="window-controls voc-window-controls">
-                <div class="voc-public-launcher" aria-label="공개 답변 소속 선택">
-                  <button class="voc-public-toggle" type="button" data-voc-lane="valentino" aria-expanded="false" aria-controls="vocPublicBoard">발렌티노</button>
-                  <button class="voc-public-toggle" type="button" data-voc-lane="vox" aria-expanded="false" aria-controls="vocPublicBoard">복스</button>
-                  <button class="voc-public-toggle" type="button" data-voc-lane="velvette" aria-expanded="false" aria-controls="vocPublicBoard">벨벳</button>
-                  <button id="vocAdminInboxToggle" class="voc-public-toggle hidden" type="button" aria-expanded="false" aria-controls="vocPublicBoard">접수된 건의</button>
-                  <button id="vocAdminAffiliationToggle" class="voc-public-toggle hidden" type="button" aria-expanded="false" aria-controls="vocPublicBoard">소속변경</button>
-                </div>
-                <button class="window-btn window-close" data-close="window-support">✕</button>
-              </div>
-            </div>
-            <div class="window-body">
-              <div class="voc-shell">
-                <section class="voc-panel">
-                  <div class="voc-top">
-                    <strong>VOXTEK 사내 VOC 센터</strong>
-                    <span id="vocStatus" class="voc-status">WAITING</span>
-                  </div>
-                  <section id="vocPublicBoard" class="voc-public-board" aria-label="공개 VOC 답변" aria-hidden="true">
-                    <div class="voc-public-head">
-                      <div>
-                        <strong id="vocPublicTitle">공개 답변 기록</strong>
-                        <span id="vocPublicDesc">질문자 정보는 표시하지 않습니다. 선택한 대표 소속의 답변만 공개됩니다.</span>
-                      </div>
-                      <button id="vocPublicClose" class="voc-public-close" type="button">닫기</button>
-                    </div>
-                    <div id="vocPublicAnswers" class="voc-public-grid"></div>
-                  </section>
-                  <div id="vocRoom" class="voc-room"></div>
-                  <div id="vocActions" class="voc-actions"></div>
-                </section>
-              </div>
-            </div>
-          </section>
-
-          
           <section class="window hidden" id="window-gallery" style="top:108px; left:224px; width:min(652px, calc(100vw - 72px));">
             <div class="window-header" data-drag-handle>
-              <div class="window-title"><span>ALBUM</span><small>@voxtagram_867988</small></div>
+              <div class="window-title"><span>VOXTAGRAM</span><small>@voxtagram_867988</small></div>
               <div class="window-controls">
                 <button class="window-btn window-close" data-close="window-gallery">✕</button>
               </div>
@@ -403,43 +307,6 @@
                 <div class="gallery-footer">
                   <div id="galleryIndex" class="gallery-index">01 / 07</div>
                 </div>
-              </div>
-            </div>
-          </section>
-
-          
-          <section class="window hidden" id="window-music" style="top:104px; left:248px; width:min(880px, calc(100vw - 72px));">
-            <div class="window-header" data-drag-handle>
-              <div class="window-title">BROADCAST <small>VoxTek Channel Selector</small></div>
-              <div class="window-controls">
-                <button class="window-btn window-close" data-close="window-music">✕</button>
-              </div>
-            </div>
-            <div class="window-body">
-              <div class="broadcast-shell">
-                <div class="broadcast-frame">
-                  <iframe
-                    id="broadcastYoutube"
-                    class="broadcast-youtube"
-                    title="VOXTEK Broadcast"
-                    src=""
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    referrerpolicy="strict-origin-when-cross-origin">
-                  </iframe>
-
-                  <div id="broadcastIntro" class="broadcast-intro">
-                    <div class="broadcast-intro-title">채널을 선택하십시오.</div>
-                    <div class="broadcast-intro-copy">BROADCAST SIGNAL 대기 중.<br>무단 시청 기록은 전부 저장됩니다.</div>
-                    <div class="broadcast-channel-grid">
-                      <button class="broadcast-channel-btn" type="button" data-kind="playlist" data-playlist="https://youtube.com/playlist?list=PLAfXPMHtFkK5UKs5eo4BrNuLbv39wE7g5&si=OdyVkpGAcF1rosmX" data-name="오리방송">오리방송</button>
-                      <button class="broadcast-channel-btn" type="button" data-kind="video" data-youtube="https://youtu.be/Z8QMdLe9G18?si=S0wlKPPj1X_FA8jf" data-name="상어방송">상어방송</button>
-                      <button class="broadcast-channel-btn" type="button" data-kind="video" data-youtube="https://youtu.be/RdBOOPCtXLE?si=0X_2adABsdxxJNPw" data-name="복스테크 내부방송">사내방송</button>
-                      <button class="broadcast-channel-btn" type="button" data-kind="playlist" data-playlist="https://youtube.com/playlist?list=PLAfXPMHtFkK52WaeAV-S45RAJmvZUVS33&si=aCJZzOGQ56rp2WH8" data-name="VOXTEK MUSIC PLAYLIST">뮤직</button>
-                    </div>
-                  </div>
-                </div>
-                <div id="broadcastCurrentChannel" class="broadcast-current">SIGNAL WAITING...</div>
               </div>
             </div>
           </section>
@@ -595,22 +462,38 @@
       </div>
     </div>
 
+    <div id="featureAlertBackdrop" class="feature-alert-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="featureAlertTitle">
+      <article class="feature-alert">
+        <div class="feature-alert-head">
+          <strong>ERROR WARNING</strong>
+          <button id="featureAlertClose" class="feature-alert-close" type="button" aria-label="닫기">×</button>
+        </div>
+        <div class="feature-alert-body">
+          <h3 id="featureAlertTitle" class="feature-alert-title">해당 기능은 아직 개방되지 않았습니다.</h3>
+          <p class="feature-alert-copy">믿고 기다리세요. <span class="feature-alert-trust">Trust us!</span></p>
+          <div class="feature-alert-status">
+            <span>ACCESS PENDING</span>
+            <span id="featureAlertModule" class="feature-alert-module">PENDING</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <audio id="errorAudio" src="Error.mp3" preload="auto"></audio>
     <audio id="bgAudio" src="vox_1.mp3" loop preload="auto"></audio>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/01-core.js"></script>
-  <script src="js/02-employee-rules.js"></script>
-  <script src="js/03-mail-data.js"></script>
-  <script src="js/04-mail.js"></script>
-  <script src="js/05-utils.js"></script>
-  <script src="js/06-employee.js"></script>
-  <script src="js/07-auth.js"></script>
-  <script src="js/08-common.js"></script>
-  <script src="js/09-evaluation.js"></script>
-  <script src="js/10-voc.js"></script>
-  <script src="js/11-media-window-wiki.js"></script>
-  <script src="js/12-gallery-idcard-drag.js"></script>
-  <script src="js/13-init.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/mail-data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/dom.js"></script>
+  <script src="js/employee.js"></script>
+  <script src="js/mail.js"></script>
+  <script src="js/gallery-id.js"></script>
+  <script src="js/attendance.js"></script>
+  <script src="js/windows.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/init.js"></script>
 </body>
 </html>
