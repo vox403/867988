@@ -129,7 +129,9 @@
       { src:'12.avif', label:'VOXTAGRAM 12' },
       { src:'13.avif', label:'VOXTAGRAM 13' },
       { src:'14.avif', label:'VOXTAGRAM 14' },
-      { src:'15.avif', label:'VOXTAGRAM 15' }
+      { src:'15.avif', label:'VOXTAGRAM 15' },
+      { src:'16.png', label:'VOXTAGRAM 16' },
+      { src:'17.png', label:'VOXTAGRAM 17' }
     ]
   };
 
